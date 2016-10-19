@@ -1,4 +1,4 @@
-# camagru
+# camagru (project of school 42)
 
 Ce projet propose de créer une petite application web permettant de réaliser des
 montages basiques à l’aide d'une webcam et d’images prédéfinies.
