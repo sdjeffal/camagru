@@ -24,8 +24,8 @@ CREATE TABLE IF NOT EXISTS `camagru`.`users` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `username` VARCHAR(64) CHARACTER SET 'utf8' NOT NULL,
   `email` VARCHAR(255) CHARACTER SET 'utf8' NOT NULL,
-  `password` MEDIUMBLOB NOT NULL,
-  `create_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP(),
+  `password` VARCHAR(64) CHARACTER SET 'utf8' NOT NULL,
+  `create_time` DATETIME NOT NULL DEFAULT NOW(),
   `is_active` TINYINT(1) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `index_username` (`username`(64) ASC),
@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `camagru`.`montages` (
   `title` VARCHAR(45) NOT NULL,
   `url` MEDIUMTEXT CHARACTER SET 'utf8' NOT NULL,
   `users_id` INT UNSIGNED NOT NULL,
-  `create_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP(),
+  `create_time` DATETIME NOT NULL DEFAULT NOW(),
   PRIMARY KEY (`id`),
   INDEX `fk_montages_users_idx` (`users_id` ASC),
   CONSTRAINT `fk_montages_users`
@@ -61,7 +61,7 @@ DROP TABLE IF EXISTS `camagru`.`comments` ;
 CREATE TABLE IF NOT EXISTS `camagru`.`comments` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `message` LONGTEXT NOT NULL,
-  `create_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP(),
+  `create_time` DATETIME NOT NULL DEFAULT NOW(),
   `users_id` INT UNSIGNED NOT NULL,
   `montages_id` INT UNSIGNED NOT NULL,
   PRIMARY KEY (`id`),
