@@ -63,20 +63,35 @@ class Database{
 		return ($this->pdo);
 	}
 
-	public function query($statement)
+	public function query($statement, $class)
 	{
 		$req = $this->getPDO()->query($statement);
-		$datas = $req->fetchAll(PDO::FETCH_OBJ);
+		$datas = $req->fetchAll(PDO::FETCH_CLASS, $class);
 		return ($datas);
 	}
 
-	public function setDbname($dbname)
+	public function prepare($statement, $attributes, $class, $one = false)
+	{
+		$req = $this->getPDO()->prepare($statement);
+		if ($req->execute($attributes)){
+			$req->setFetchMode(PDO::FETCH_CLASS, $class);
+			if ($one)
+				$data = $req->fetch();
+			else
+				$data = $req->fetchAll();
+			return ($data);
+		}
+		else
+			return(FALSE);
+	}
+
+	protected function setDbname($dbname)
 	{
 		if (!empty($dbname) && settype($dbname, "string"))
 			$this->db_name = 'dbname='.$dbname;
 	}
 
-	public function setDbhost($dbhost)
+	protected function setDbhost($dbhost)
 	{
 		if (!empty($dbhost) && settype($dbhost, "string"))
 			$this->db_host = 'host='.$dbhost;

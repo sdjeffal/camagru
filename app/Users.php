@@ -4,17 +4,12 @@ namespace App;
 * Class Users
 */
 class Users{
-  private $login;
-  private $email;
-  private $type;
+    private $id;
+    private $username;
+    private $email;
+    private $password;
+    private $create_time;
+    private $is_active;
 
-/**
-* Constructeur de la classe Users
-*/
-  public function __construct(array $kwargs){
-    $this->login = "";
-    $this->email = "";
-    $this->type = "";
-  }
 }
 ?>

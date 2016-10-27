@@ -10,8 +10,8 @@ else {
   $page = 'home';
 }
 $db = new App\Database(array('config' => $_SERVER['DOCUMENT_ROOT'].'/config/database.php'));
-$data = $db->query("SELECT * FROM users");
-print_r($data);
+$data = $db->prepare('SELECT * FROM users', array(), "App\\Users", TRUE);
+var_dump($data);
 ob_start();
 if ($page === 'home')
 {
