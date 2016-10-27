@@ -1,4 +1,4 @@
-<?php
+``<?php
 //chargement dynamique des classes
 require '../app/Autoloader.php';
 App\Autoloader::register();
@@ -9,10 +9,8 @@ if (isset($_GET['page'])){
 else {
   $page = 'home';
 }
-
+echo $_SERVER["DOCUMENT_ROOT"];
 $db = new Database(array('config' => '../config/database.php'));
-$datas = $db->query("SELECT * FROM users");
-var_dump($datas);
 ob_start();
 if ($page === 'home')
 {
