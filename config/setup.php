@@ -2,7 +2,7 @@
 require_once("./database.php");
 try{
 	$param= array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8");
-	$pdo = new PDO($DB_DRIVER.$DB_HOST.$DB_PORT, $DB_USER, $DB_PASSWORD, $param);
+	$pdo = new PDO($DB_DSN, $DB_USER, $DB_PASSWORD, $param);
 	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	if (file_exists($DB_FILE)){
 		$file = file_get_contents($DB_FILE);

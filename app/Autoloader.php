@@ -4,7 +4,6 @@ namespace App;
 * Class Autoloader
 */
 class Autoloader{
-
 /**
 * Enregister l'autoloader
 */
