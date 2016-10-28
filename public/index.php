@@ -3,21 +3,26 @@
 require '../app/Autoloader.php';
 App\Autoloader::register();
 
-if (isset($_GET['page'])){
-  $page = $_GET['page'];
+if (isset($_GET['view'])){
+  settype($_GET['view'], 'string');
+  $view = $_GET['view'];
 }
 else {
-  $page = 'home';
+  $view = 'home';
 }
 $db = new App\Database(array('config' => $_SERVER['DOCUMENT_ROOT'].'/config/database.php'));
-$data = $db->prepare('SELECT * FROM users', array(), "App\\Users", TRUE);
-var_dump($data);
 ob_start();
-if ($page === 'home')
+if (file_exists($_SERVER["DOCUMENT_ROOT"].'/view/'.$view.'.php'))
 {
-  $title = ucfirst(strtolower($page));
-  require $_SERVER["DOCUMENT_ROOT"].'/pages/home.php';
+  $title = ucfirst(strtolower($view));
+  require($_SERVER["DOCUMENT_ROOT"].'/view/'.$view.'.php');
+}
+else
+{
+  header("HTTP/1.0 404 Not Found");
+  $title = "404 Not Found";
+  require($_SERVER["DOCUMENT_ROOT"].'/view/404.php');
 }
 $content = ob_get_clean();
-require $_SERVER["DOCUMENT_ROOT"].'/pages/templates/default.php';
+require($_SERVER["DOCUMENT_ROOT"].'/view/templates/default.php');
 ?>
