@@ -9,7 +9,7 @@ class Database{
 	private $db_host;
 	private $db_driver;
 	private $db_port;
-	private $db_dns;
+	private $db_dsn;
 	private $pdo;
 
 	public function __construct(array $kargs)
@@ -26,7 +26,7 @@ class Database{
 			$this->db_port = $DB_PORT;
 			$this->db_dsn = $DB_DSN;
 		}
-		else if (!empty(kargs))
+		else if (!empty($kargs))
 		{
 			if (array_key_exists("db_name", $kargs) && !empty($kargs["db_name"]))
 				$this->setDbname($kargs["db_name"]);
