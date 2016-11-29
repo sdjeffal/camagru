@@ -205,6 +205,12 @@
                     ElemMsgError = createFlushError(null, "le format du fichier est invalide.");
                     submit.parentNode.insertBefore(ElemMsgError, submit.nextSibling);
                 }
+                else if(submit.nextSibling.getAttribute('class') == "alert"){
+                        p = submit.nextSibling.getElementsByTagName("p");
+                        p[0].innerHTML = "<strong>Erreur:</strong> le format du fichier est invalide." ;
+                }
+                submit.innerHTML = "upload";
+                return;
             }
             if (checkRadio()){
                 var reader = new FileReader();
@@ -225,6 +231,12 @@
                     ElemMsgError = createFlushError(null, "Tu dois choisir un cadre.");
                     submit.parentNode.insertBefore(ElemMsgError, submit.nextSibling);
                 }
+                else if(submit.nextSibling.getAttribute('class') == "alert"){
+                        p = submit.nextSibling.getElementsByTagName("p");
+                        p[0].innerHTML = "<strong>Erreur:</strong> Tu dois choisir un cadre." ;
+                }
+                submit.innerHTML = "upload";
+                return;
             }
         }else {
             if (isBlank(submit.nextSibling))
@@ -232,6 +244,12 @@
                 ElemMsgError = createFlushError(null, "Aucun fichier sélectionner.");
                 submit.parentNode.insertBefore(ElemMsgError, submit.nextSibling);
             }
+            else if(submit.nextSibling.getAttribute('class') == "alert"){
+                    p = submit.nextSibling.getElementsByTagName("p");
+                    p[0].innerHTML = "<strong>Erreur:</strong> Aucun fichier sélectionner." ;
+            }
+            submit.innerHTML = "upload";
+            return;
         }
         submit.innerHTML = "upload";
     });

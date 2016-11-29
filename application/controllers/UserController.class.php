@@ -151,7 +151,7 @@ class UserController extends Controller{
                 $user->getUserByEmail($post["mail"]);
                 if ($user->isEmpty() !== true){
                     if ($this->sendMailChangePasswd($user)){
-                        $message =  "Ta demande de changement de mot de passe a été pris en compte.";
+                        $message =  "Ta demande de changement de mot de passe a été prise en compte.";
                         $message .= "<br/>Un email t'a été envoyé pour confirmer et finaliser ta demande";
                         return ($this->view("success", array("message" => $message)));
                     }

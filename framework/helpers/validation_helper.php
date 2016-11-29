@@ -4,7 +4,7 @@ function validationLogin($name)
 {
     if (preg_match("/^[a-z0-9]{1,64}$/i", $name))
         return true;
-    $_SESSION["errorLogin"] = "Votre identifiant doit contenir entre 1 et 64 caractères alphanumériques.";
+    $_SESSION["errorLogin"] = "Ton identifiant doit contenir entre 1 et 64 caractères alphanumériques.";
     return false;
 }
 
@@ -30,7 +30,7 @@ function validationPassword($passwd, $passwdbis)
         $boolMatch = true;
     else
     {
-        $_SESSION["errorPasswd"] = "Votre mot de passe doit contenir entre 6 et 24 caractères alphanumériques avec au moins une lettre minuscule, une majuscule et un chiffre.";
+        $_SESSION["errorPasswd"] = "Ton mot de passe doit contenir entre 6 et 24 caractères alphanumériques avec au moins une lettre minuscule, une majuscule et un chiffre.";
         $boolMatch = false;
     }
     if ($bool && $boolMatch)

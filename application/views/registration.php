@@ -6,6 +6,11 @@
         <li>Pour dire haut et fort ce que tu penses des photos des autres en commentant.</li>
         <li>Pour que tout le monde sachent celles que tu kiffes.</li>
     </ul>
+    <ul class="notification">
+        <li>Ton <strong>identifiant</strong> doit contenir entre <strong>1 et 64 caractères alphanumériques</strong>.</li>
+        <li>Ton <strong>adresse Email</strong> doit-être <strong>valide</strong> afin de confirmer ton inscription.</li>
+        <li>Ton <strong>mot de passe</strong> doit contenir entre <strong>6 et 24 caractères alphanumériques avec au moins une lettre minuscule, une majuscule et un chiffre</strong>.</li>
+    </ul>
     <?php putFlush('errorAll');?>
     <form method="POST" name="registration" action="index.php?controller=User&action=registration">
         <div>

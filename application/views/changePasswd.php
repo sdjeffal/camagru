@@ -1,14 +1,21 @@
 <section class="center">
     <h1>Changement de mot de passe</h1>
+    <ul class="notification">
+        <li>Ton <strong>mot de passe</strong> doit contenir entre <strong>6 et 24 caractères alphanumériques avec au moins une lettre minuscule, une majuscule et un chiffre</strong>.</li>
+    </ul>
     <?php
     putFlush('errorAll');
     putFlush('errorModified');
     ?>
     <form method="POST" action="index.php?controller=User&action=changePasswd">
-        Nouveau mot de passe: <input name="passwd" type="password" value="<?= $_POST["passwd"]?>"/>
+        <div>
+            <input name="passwd" type="password" placeholder="nouveau mot de passe" value="<?= $_POST["passwd"]?>"/>
+        </div>
         <?php putFlush('errorPasswd');?>
         <br />
-        Retaper ton nouveau mot de passe: <input name="passwdbis" type="password" value="<?= $_POST["passwdbis"]?>"/>
+        <div>
+            <input name="passwdbis" type="password" placeholder="Retaper ton nouveau mot de passe" value="<?= $_POST["passwdbis"]?>"/>
+        </div>
         <?php putFlush('errorPasswdBis');?>
         <br />
         <input type="hidden" name="login" value="<?= $login ?>">

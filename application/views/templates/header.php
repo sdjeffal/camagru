@@ -1,6 +1,6 @@
 <nav>
 	<ul class="topnav">
-		<li><p class="brand">Camagru</p></li>
+		<li><a href="index.php?controller=Index&action=index" class="brand">Camagru</a></li>
 		<li><a href="index.php?controller=Index&action=index">galerie</a></li>
 		<li><a href="index.php?controller=Mounting&action=index">monter une image</a></li>
 		<?php if ($this->islog() !== true){?>
