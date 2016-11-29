@@ -1,0 +1,3 @@
+INSERT INTO `users` (`id`, `username`, `email`, `password`, `key`, `create_time`, `is_active`) VALUES
+(NULL, 'sdjeffal', 'sdjeffal@student.42.fr', '$2y$10$9snKtVI.P.n9mMVmoQMHzOi/hhCoIUtt/48kvUfgRlD/JLLN.YoJW', '$2y$10$RqJDim9qD4WIhuvYWdctOuDOHj4uHK8UJn8pvsHtHkW5g31dgjxaG', '2016-10-27 11:38:08', 1),
+(NULL, 'test', 'djelk76@hotmail.fr', '$2y$10$9snKtVI.P.n9mMVmoQMHzOi/hhCoIUtt/48kvUfgRlD/JLLN.YoJW', '$2y$10$RqJDim9qD4WIhuvYWdctOuDOHj4uHK8UJn8pvsHtHkW5g31dgjxaG', '2016-10-29 20:27:13', 0);
