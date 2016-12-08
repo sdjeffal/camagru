@@ -205,7 +205,8 @@
                     ElemMsgError = createFlushError(null, "le format du fichier est invalide.");
                     submit.parentNode.insertBefore(ElemMsgError, submit.nextSibling);
                 }
-                else if(submit.nextSibling.getAttribute('class') == "alert"){
+                else if(submit.nextSibling.getAttribute('class') == "alert" || submit.nextSibling.getAttribute('class') == "alert success"){
+                        submit.nextSibling.className = "alert";
                         p = submit.nextSibling.getElementsByTagName("p");
                         p[0].innerHTML = "<strong>Erreur:</strong> le format du fichier est invalide." ;
                 }
@@ -223,6 +224,11 @@
                         ElemMsgError = createFlushError("success", "Upload réussi ;)");
                         submit.parentNode.insertBefore(ElemMsgError, submit.nextSibling);
                     }
+                    else if(submit.nextSibling.getAttribute('class') == "alert"){
+                            submit.nextSibling.className = "alert success";
+                            p = submit.nextSibling.getElementsByTagName("p");
+                            p[0].innerHTML = "<strong>Succès:</strong> Upload réussi ;)" ;
+                    }
                 }
             }
             else {
@@ -231,7 +237,8 @@
                     ElemMsgError = createFlushError(null, "Tu dois choisir un cadre.");
                     submit.parentNode.insertBefore(ElemMsgError, submit.nextSibling);
                 }
-                else if(submit.nextSibling.getAttribute('class') == "alert"){
+                else if(submit.nextSibling.getAttribute('class') == "alert" || submit.nextSibling.getAttribute('class') == "alert success"){
+                        submit.nextSibling.className = "alert";
                         p = submit.nextSibling.getElementsByTagName("p");
                         p[0].innerHTML = "<strong>Erreur:</strong> Tu dois choisir un cadre." ;
                 }
@@ -244,7 +251,8 @@
                 ElemMsgError = createFlushError(null, "Aucun fichier sélectionner.");
                 submit.parentNode.insertBefore(ElemMsgError, submit.nextSibling);
             }
-            else if(submit.nextSibling.getAttribute('class') == "alert"){
+            else if(submit.nextSibling.getAttribute('class') == "alert" || submit.nextSibling.getAttribute('class') == "alert success"){
+                    submit.nextSibling.className = "alert";
                     p = submit.nextSibling.getElementsByTagName("p");
                     p[0].innerHTML = "<strong>Erreur:</strong> Aucun fichier sélectionner." ;
             }
