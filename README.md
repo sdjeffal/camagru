@@ -1,5 +1,5 @@
 # Camagru (project of school 42)
-
+#### Objectif
 Ce projet propose de créer une petite application web permettant de réaliser des
 montages basiques à l’aide d'une webcam et d’images prédéfinies.
 
@@ -9,6 +9,9 @@ prendre une photo depuis sa webcam et admirer le résultat d’un montage digne
 de James Cameron.
 
 Toutes les images prises devront être publiques, likeables et commentables.
+
+#### Contraintes
+* aucun framework autorisés
 
 # Installation
 
