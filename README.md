@@ -16,6 +16,13 @@ __Grade: 121 /100 (max)__
 
 *French subject --> cf camagru.fr.pdf*
 
+## Installation
+
+- To install the database, you must configure the path-project/application/config/database.php file.
+
+- Open the shell.
+  		  
+- php -n path-project/application/config/setup.php
 
 ## Getting Started
 
