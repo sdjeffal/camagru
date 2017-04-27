@@ -18,9 +18,9 @@ __Grade: 121 /100 (max)__
 
 ## Installation
 
-- To install the database, you must configure the path-project/application/config/database.php file.
+- To install the database, you must configure the path-project/application/config/database.php file
 
-- Open the shell.
+- Open the shell
   		  
 - php -n path-project/application/config/setup.php
 
