@@ -24,3 +24,21 @@ Ouvrir le shell et se mettre à la racine du projet.
 Pour installer la base de données, il faut configurer le fichier application/config/database.php et lancer le script application/config/setup.php:
 
 php -n application/config/setup.php
+
+## Notes
+
+- MySQL with PDO
+- PhpMyAdmin
+- Local authentication and connexion system
+- Proper data validation for security concern
+- Webcam streaming
+- Picture capturing with filters/layers added
+- Likes
+- Comments
+- Emailing for account validation and forgotten password
+- File uploading
+- Responsive design
+- MVC design pattern wannabe
+- Procedural code
+- Firefox and Chrome support
+
