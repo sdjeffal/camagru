@@ -1,29 +1,27 @@
-# Camagru (project of school 42)
-#### Objectif
-Ce projet propose de créer une petite application web permettant de réaliser des
-montages basiques à l’aide d'une webcam et d’images prédéfinies.
+# Camagru
 
-Un utilisateur du site devra donc être capable de sélectionner une image dans
-une liste d’images superposables (par exemple, des cadres ou des objets à l’utilité douteuse),
-prendre une photo depuis sa webcam et admirer le résultat d’un montage digne
-de James Cameron.
+Web app' for sharing funny selfies.
 
-Toutes les images prises devront être publiques, likeables et commentables.
 
-#### Contraintes
-* Framework et et library interdit
+## Subject
 
-# Prérequis
+Camagru is the first 42's web project.
 
-Apache, MySql et PHP
+It's available after validating the web "piscine", during which we learn the very basics of CSS | HTML | SQL | PHP | JS in 2 weeks.
 
-# Installation
+### No libraries or frameworks are allowed for this project
 
-Ouvrir le shell et se mettre à la racine du projet.
 
-Pour installer la base de données, il faut configurer le fichier application/config/database.php et lancer le script application/config/setup.php:
+__Grade: 121 /100 (max)__
 
-php -n application/config/setup.php
+*French subject --> cf camagru.fr.pdf*
+
+
+## Getting Started
+
+You need LAMP/MAMP/WAMP to start a web server.
+
+Git clone parent repo 'portfolio' in the related *AMP folder and browse to 'localhost:8080/{your portfolio's folder name}/camagru/'.
 
 ## Notes
 
