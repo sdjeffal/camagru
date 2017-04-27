@@ -13,6 +13,10 @@ Toutes les images prises devront être publiques, likeables et commentables.
 #### Contraintes
 * Framework interdit
 
+# Prérequis
+
+Apache, MySql et PHP
+
 # Installation
 
 Ouvrir le shell et se mettre à la racine du projet.
