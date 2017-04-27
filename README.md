@@ -11,7 +11,7 @@ de James Cameron.
 Toutes les images prises devront être publiques, likeables et commentables.
 
 #### Contraintes
-* Frameworket et library interdit
+* Framework et et library interdit
 
 # Prérequis
 
